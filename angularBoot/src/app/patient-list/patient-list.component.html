@@ -1,0 +1,45 @@
+
+    <h1> Patient lists </h1>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+               
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Age</th>
+                <th>Date</th>
+                <th>Phone</th>
+                <th>Mail</th>
+                <th>Address</th>
+                <th>Image</th>
+                <th>Actions</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of patients">
+             
+                <td>{{p.name}}</td>
+                <td>{{p.gender}}</td>
+                <td>{{p.age}}</td>
+                <td>{{p.date}}</td>
+                <td>{{p.email}}</td>
+                <td>{{p.phone}}</td>
+                <td>{{p.address}}</td>
+                <td>{{p.imagePath}}</td>
+                <td>
+                    <button (click)="updatePatient(p.id)" class="btn btn-primary">Update</button>
+                    <button (click)="deletePatient(p.id)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+                    <button (click)="patientDetails(p.id)" class="btn btn-info" style="margin-left: 10px;">Details</button>
+                </td>
+                
+                
+
+            </tr>
+        </tbody>
+    </table>
+
+
+
+
